@@ -24,9 +24,7 @@ public class CastingTask2 {
 		System.out.println(res1);
 		
 //		2번 문제
-		char char1 = 'a';
-		char char2 = 'j';
-		char char3 = 'k';
+		char char1 = 'a', char2 = 'j', char3 = 'k';
 		String res2 = (char)(char1 - 32)+ ", " +  (char)(char2 - 32) + ", " + (char)(char3 - 32);
 		System.out.println(res2);
 		
