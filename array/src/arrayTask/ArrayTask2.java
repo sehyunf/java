@@ -73,6 +73,10 @@ public class ArrayTask2 {
 //			System.out.print(hangleArray[charArray[i] - 48]);
 //		}
 
+//		2) 정수를 한글로 변경
+//      입력 예) 1024
+//      출력 예) 일공이사
+		
 //      3) 문자열과 찾을 문자를 입력받고
 //      문자열에서 문자의 개수를 찾기
 //      예시) 입력: content cc!
