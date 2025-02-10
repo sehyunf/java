@@ -8,8 +8,7 @@ public class ArrayHomework {
 //      1) 사용자에게 입력받은 문자열 중 소문자는 모두 대문자로
 //      대문자는 모두 소문자로 변경한다.
 //      
-//      .charAt()
-//      단 문자열의 메서드는 사용하지 않는다.
+//      매서드를 사용해 코드를 간결하게 만들자
 //      
 //      입력 예) 안녕hI!!
 //      출력 예) 안녕Hi!!
@@ -19,7 +18,7 @@ public class ArrayHomework {
 //		소문자범위와 대문자 범위로 if문 짜기
 //		소문자 범위 해당 문자는 -32
 //		대문자 범위 해당 문자는 +32
-		
+//		
 //		Scanner sc = new Scanner(System.in);
 //		String massage = "문자열을 입력해주세요 \nex) 가나다ABCabc";
 //		char[] charArray = null;
@@ -36,7 +35,7 @@ public class ArrayHomework {
 //				System.out.print(i);
 //			}
 //		}
-		
+//		
 
 //		2) 정수를 한글로 변경
 //      입력 예) 1024
@@ -60,15 +59,15 @@ public class ArrayHomework {
 //          c의 개수 3개
 		
 		Scanner sc = new Scanner(System.in);
-		String massage1 = "문자열을 입력하세요 : ex)",
-				massage2 = "찾고싶은 문자를 입력하세요 : ",
+		String massage1 = "문자열을 입력하세요 \nex)가가나가나다가나다라",
+				massage2 = "찾고싶은 문자를 입력하세요 \nex)가나",
 				userInput = null,
 				find = null;
 		int findResult = 0;
 		
-		System.out.print(massage1);
+		System.out.println(massage1);
 		userInput = sc.nextLine();
-		System.out.print(massage2);
+		System.out.println(massage2);
 		find = sc.nextLine();
 		for(int i = 0; i < userInput.length(); i++) {
 			if(userInput.charAt(i)== find.charAt(0) && userInput.length()-i >= find.length()) {
@@ -85,11 +84,5 @@ public class ArrayHomework {
 		System.out.println("\""+userInput+"\"중 \""+find+"\"의 갯수 : "+ findResult +"개");
 		
 		
-		
-		
-		
-
-		
 	}
-
 }

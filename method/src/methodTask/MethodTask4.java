@@ -4,16 +4,11 @@ import java.util.Scanner;
 
 public class MethodTask4 {
 //  1) 문자열을 입력 받고 원하는 문자의 개수를 구해주는 메소드
-	int countChar(String input, String find) {
+	int countChar(String input, char find) {
 		int count = 0;
 		for(int i = 0; i < input.length(); i++) {
-			for(int j = 0; j < find.length(); j++) {
-				if(input.charAt(i) != find.charAt(j)) {
-					continue;
-				}
-				if(j == find.length() - 1) {
-					count++;
-				}
+			if(input.charAt(i) == find) {
+				count++; 
 			}
 		}
 		return count;
@@ -49,19 +44,19 @@ public class MethodTask4 {
 //		return result;
 //	}
 	
-	String korToNum(String input) {
+	int korToNum(String input) {
 		String result = "", hangle = "공일이삼사오육칠팔구";
 		for(int i = 0; i < input.length(); i++) {
 			result += hangle.indexOf(input.charAt(i));
 		}
-		return result;
+		return Integer.parseInt(result);
 	}
 	
 //  4) 5개의 정수를 입력받고 최댓값과 최솟값을 구해 값을 반환해주는 메소드
 	
 	int[] MaxAndMin(int[] num) {
 		int[] returnArray = {num[0], num[0]}; 
-		for(int i = 0; i < num.length; i++) {
+		for(int i = 1; i < num.length; i++) {
 			if(returnArray[0] < num[i]) {
 				returnArray[0] = num[i];
 			}
@@ -69,6 +64,7 @@ public class MethodTask4 {
 				returnArray[1] = num[i];
 			}
 		}
+		// returnArray의 0번째 index = 최댓값, 1번째 index = 최솟값
 		return returnArray;
 	}
 	
@@ -97,7 +93,6 @@ public class MethodTask4 {
 			}
 		}
 		return index;
-		
 	}
 
 	public static void main(String[] args) {
@@ -105,15 +100,15 @@ public class MethodTask4 {
 		Scanner sc = new Scanner(System.in);
 		String massage1 = "문자열을 입력하세요 : ", 
 				massage2 = "찾을 문자를 입력하세요 : ",
-				input = null,
-				find = null;
+				input = null;
 		int count = 0, max = 0, min = 0;
+		char find = 0;
 		int[] array3 = {6,2,10,4,5}, resultArray = null;
 		
 		System.out.print(massage1);
 		input = sc.nextLine();
 		System.out.print(massage2);
-		find = sc.next();
+		find = sc.next().charAt(0);
 		count = mt4.countChar(input, find);
 		System.out.println(find + "의 갯수 : " + count);
 		
@@ -127,11 +122,7 @@ public class MethodTask4 {
 		
 		mt4.MaxAndMinVoid(array3);
 		
-		"a".indexOf(1);
-		System.out.println(mt4.indexOf("하나둘삼넷오여섯칠팔아홉공오오오", '오'));
-		
-		
-
+		System.out.println("a".indexOf('1'));
+		System.out.println(mt4.indexOf("하나둘삼넷오여섯칠팔아홉공", '궬'));
 	}
-
 }
