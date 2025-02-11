@@ -24,5 +24,11 @@ public class A {
 		a.printData();
 		b.printData();
 		
+		String ab = "가나다라";
+		String abc = "가나";
+		String def = "다라";
+		String abcdef = abc.concat(def);
+		System.out.println(ab == abcdef);
+		
 	}
 }
