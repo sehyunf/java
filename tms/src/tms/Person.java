@@ -1,43 +1,36 @@
-package ex03;
+package tms;
 
 import java.util.Objects;
 
 public class Person {
+	private int id;
 	private String name;
 	private int age;
+	private String phone;
 	private String job;
-	private String hobby;
 	
 	public Person() {;}
-	public Person(String name, int age, String job, String hobby) {
+	
+	public Person(String name, int age, String phone, String job) {
 		this.name = name;
 		this.age = age;
+		this.phone = phone;
 		this.job = job;
-		this.hobby = hobby;
-	}
-	
-	void printName() {
-		System.out.println(this.getName());
 	}
 	
 	void work() {
-		System.out.println(this.getJob()+"은 하는 일이 없습니다.");
-	}
-
-	void hobby() {
-		System.out.println("취미는 잠자기 입니다.");
+		System.out.println("일을 합니다");
 	}
 	
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", job=" + job + ", hobby=" + hobby + "]";
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", phone=" + phone + ", job=" + job + "]";
 	}
-
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(age, hobby, job, name);
+		return Objects.hash(age, id, job, name, phone);
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -47,44 +40,40 @@ public class Person {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		return age == other.age && Objects.equals(hobby, other.hobby) && Objects.equals(job, other.job)
-				&& Objects.equals(name, other.name);
+		return age == other.age && id == other.id && Objects.equals(job, other.job) && Objects.equals(name, other.name)
+				&& Objects.equals(phone, other.phone);
 	}
-
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public int getAge() {
 		return age;
 	}
-
 	public void setAge(int age) {
 		this.age = age;
 	}
-
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 	public String getJob() {
 		return job;
 	}
-
 	public void setJob(String job) {
 		this.job = job;
 	}
-
-	public String getHobby() {
-		return hobby;
-	}
-
-	public void setHobby(String hobby) {
-		this.hobby = hobby;
-	}
-	
-	
-	
 	
 	
 }

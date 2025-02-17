@@ -14,5 +14,7 @@ public class PersonMainisNotebook {
 		prog1.hobby();
 		prog1.isNotebook();
 		
+		System.out.println(per1.hashCode());
+		
 	}
 }
