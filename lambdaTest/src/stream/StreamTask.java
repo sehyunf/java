@@ -44,8 +44,8 @@ public class StreamTask {
 		
 		ArrayList<Character> data4 = new ArrayList<Character>();
 		IntStream.rangeClosed(0, 5).forEach(num -> {
-			if(num != 'D' - 'A') {
-				data4.add((char)(num+'A'));				;
+			if(num != 3) {
+				data4.add((char)(num+'A'));
 			}
 		});
 		data4.forEach(System.out::println);
