@@ -1,4 +1,4 @@
-package catingTesk2;
+package castingTesk2;
 
 public class CastingTask2 {
 	public static void main(String[] args) {

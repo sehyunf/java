@@ -1,4 +1,4 @@
-package catingTest;
+package castingTest;
 
 class Car {
 	public Car() {;}

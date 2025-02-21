@@ -1,4 +1,4 @@
-package catingTask1;
+package castingTask1;
 
 import java.util.Scanner;
 
