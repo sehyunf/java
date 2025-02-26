@@ -27,7 +27,7 @@ public class Client02 {
 			out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
 			
 			while(true) {
-				System.out.println("클라이언트에서 서버로 보내기 >>> ");
+				System.out.print("클라이언트에서 서버로 보내기 >>> ");
 				String outMessage = sc.nextLine();
 				
 				out.write(outMessage + "\n");
