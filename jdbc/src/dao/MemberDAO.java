@@ -186,6 +186,11 @@ public class MemberDAO {
 	}
 	
 //	비밀번호 변경
+//	- 비밀번호 찾기
+//	public void findPassword(MemberVO memberVO) {
+//		
+//	}
+	
 	public void changePassword(String changePassword) {
 		connection = DBConnecter.getConnect();
 		String query = "UPDATE TBL_MEMBER SET MEMBER_PASSWORD = ? WHERE ID = ?";
@@ -197,7 +202,11 @@ public class MemberDAO {
 			
 			
 //				preparedStatement.executeUpdate();
-			preparedStatement.executeQuery();
+			resultSet = preparedStatement.executeQuery();
+			
+			resultSet.next();
+			
+			session = resultSet.getLong(1);
 			
 			
 		} catch (SQLException e) {
@@ -233,15 +242,14 @@ public class MemberDAO {
 			preparedStatement.setLong(1, session);
 			
 			
-//			preparedStatement.executeUpdate();
-			preparedStatement.executeQuery();
+			preparedStatement.executeUpdate();
+//			preparedStatement.executeQuery();
 			
 			
 		} catch (SQLException e) {
 			System.out.println("join(MemberVO) query문 오류");
 			e.printStackTrace();
 		} finally {
-//			드라이브를 열었던 순서의 반대로 닫음
 			try {
 				if(preparedStatement != null) {
 					preparedStatement.close();

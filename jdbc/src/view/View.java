@@ -76,17 +76,17 @@ public class View {
 //			System.out.println("중복된 아이디");
 //		}
 		
-		if(memberDAO.login("jang1234", "123123")) {
-			System.out.println("로그인 실패 다시 입력해 주세요");
-		}else {
-			System.out.println("로그인 성공");
-		}
+//		if(memberDAO.login("jang1234", "123123")) {
+//			System.out.println("로그인 실패 다시 입력해 주세요");
+//		}else {
+//			System.out.println("로그인 성공");
+//		}
+//		
+//		memberDAO.changePassword("123123");
+//		System.out.println("비밀번호 변경 완료");
 		
-		memberDAO.changePassword("123123");
-		System.out.println("비밀번호 변경 완료");
-		
-		memberDAO.goodBye(memberVO);
-		System.out.println("회원 탈퇴 완료. 안녕히가세요");
+//		memberDAO.goodBye(memberVO);
+//		System.out.println("회원 탈퇴 완료. 안녕히가세요");
 		
 		
 	}
